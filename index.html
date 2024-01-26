@@ -11,18 +11,19 @@
   <script src="index.js"></script>
   <style>
     .score-board{
+      padding: 14px 10px;
       display: flex;
       height: 10vh;
       width: 11%;
       justify-content: center;
       align-content: center;
-      flex-direction: column;
+      flex-direction: row;
       margin: auto;
-      margin-bottom: 15px;
-
+      margin-bottom: -37px;
+      font-size: 0.7em;
+    color: greenyellow;
     
-      background-color: pink;
-      border: 2px solid palevioletred;
+
       border-radius: 30px;
     }
     .container{
@@ -33,20 +34,20 @@
       align-content:center ;
     }
     body{
-      background:  url('background.jpg');
+      background:  url('background4.jpg');
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    
+   
     .grid{
-      /* background-color: aqua; */
-      background-color: rgba(255, 0, 0, 0.2);;
-      height: 560px;
-      width: 560px;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 25px;
-      border-radius: 10px;
-      background-position: center center;
+      /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(8 ,1fr);
+    grid-template-rows: repeat(8,1fr);
+    padding: 10px;
+    
+    background-color: rgba(0, 0, 0, 0.2);;
+    border-radius: 10px;
+    background-position: center center;
 
     }
     .grid div{
@@ -60,7 +61,9 @@
     }
     #score{
       text-align: center;
+      padding: 0px 10px;
       margin: 0px 0px;
+      font-size: 16px;
     
     }
     h2 {
@@ -77,8 +80,8 @@
 
 
     <div class="score-board">
-      <h2>Score</h2>
-      <h1 id="score" ></h1>
+      <h2>Score  :  </h2>
+      <h1 id="score" >  </h1>
     </div>
     <div class="container">
       
@@ -98,4 +101,4 @@
       <source  src="audio/audio2.mp3" type="audio/mpeg">
     </audio>
 </body>
-</html>
+</html> 
