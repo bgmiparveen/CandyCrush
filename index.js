@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // alert("Welcome to Juicy World")
+    var delay_popup = 100; setTimeout("document.getElementById('overlay').style.display='block'", delay_popup)
     const grid = document.querySelector('.grid')
     let scoreDisplay = document.getElementById('score')
     let width = 8;
     let squares = []
     let score = 0
     function playit() {
-        document.getElementById('myAudio').play()
+        document.getElementById('audio').play()
 
     }
 
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scoreDisplay.innerHTML = score
 
                 rowOfFive.forEach(index => {
-                    document.getElementById('myAudio3').play()
+                    document.getElementById('audio').play()
                     squares[index].style.backgroundImage = ''
 
                 })
@@ -166,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scoreDisplay.innerHTML = score
 
                 columnOfFive.forEach(index => {
-                    document.getElementById('myAudio3').play()
+                    document.getElementById('audio').play()
                     squares[index].style.backgroundImage = ''
 
                 })
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scoreDisplay.innerHTML = score
 
                 rowOfFour.forEach(index => {
-                    document.getElementById('myAudio2').play()
+                    document.getElementById('audio').play()
                     squares[index].style.backgroundImage = ''
 
                 })
@@ -211,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scoreDisplay.innerHTML = score
 
                 columnOfFour.forEach(index => {
-                    document.getElementById('myAudio2').play()
+                    document.getElementById('audio').play()
                     squares[index].style.backgroundImage = ''
 
                 })
@@ -233,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 score += 3
                 scoreDisplay.innerHTML = score
                 rowOfThree.forEach(index => {
-                    document.getElementById('myAudio2').play()
+                    document.getElementById('audio').play()
                     squares[index].style.backgroundImage = ''
                 })
                 return true
@@ -255,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scoreDisplay.innerHTML = score
 
                 columnOfThree.forEach(index => {
-                    document.getElementById('myAudio2').play()
+                    document.getElementById('audio').play()
                     squares[index].style.backgroundImage = ''
 
                 })
@@ -292,17 +293,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let zeroScore = 1;
 
     function makeZeroScore() {
-    
-            
-            score = 0
-            scoreDisplay.innerHTML = score
-            console.log("tatti")
-          
+
+
+        score = 0
+        scoreDisplay.innerHTML = score
+        console.log("tatti")
+
     }
     makeZeroScore()
-    
-    
-    
+
+
+
     checkColumnForFour()
     window.setInterval(function () {
         checkColumnForFive()
@@ -314,16 +315,16 @@ document.addEventListener('DOMContentLoaded', () => {
         moveDown()
         // zero()
 
-        
+
     }, 100)
-   
-    
-    
-    
+
+
+
+
     console.log(score)
     setTimeout(() => {
         console.log("this")
         makeZeroScore()
-    }, 4000);
-    
+    }, 6000);
+
 })
