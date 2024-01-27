@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         score = 0
         scoreDisplay.innerHTML = score
-        console.log("tatti")
+
 
     }
     makeZeroScore()
@@ -325,6 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         console.log("this")
         makeZeroScore()
-    }, 6000);
+    }, 8000);
 
 })
