@@ -52,12 +52,15 @@
       ;
       border-radius: 10px;
       background-position: center center;
+      position: relative;
+      left: 180px;
 
     }
 
     .grid div {
       height: 70px;
       width: 70px;
+
     }
 
     .grid div {
@@ -115,21 +118,159 @@
       border-radius: 10px;
     }
 
-    .close {
+    #popupt {
 
-      font-size: 33px;
+      background: #fff;
+      padding: 20px;
+      max-width: 520px;
+      height: 20%;
+      margin: 16% auto;
       position: relative;
-      top: 4px;
-      left: 40%;
+      color: #000000;
+      background-color: black;
+      border: 2px solid greenyellow;
+      border-radius: 10px;
+    }
 
+    #btn {
+      width: 52px;
+      font-size: 24px;
+      position: relative;
+      top: 20px;
+      left: 40%;
       cursor: pointer;
       z-index: 5;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       color: greenyellow;
       background-color: #1a1717;
-      border: 3px solid greenyellow;
+      border: 2px solid greenyellow;
       border-radius: 30%;
-      padding: 10px 22px;
+      padding: 3px 10px;
+
+    }
+
+    input[type="text"],
+    textarea {
+
+
+      border: none;
+      color: greenyellow;
+
+
+
+    }
+
+    #displayname {
+      margin-top: 15px;
+      margin-left: 12px;
+
+    }
+
+    #countdown {
+      width: 150px;
+      position: relative;
+      top: -4%;
+      left: 44%;
+    }
+
+    #target {
+      width: 100px;
+      position: relative;
+      left: 90px;
+    }
+
+
+    #targetAchieved {
+      position: fixed;
+      display: none;
+      z-index: 999999;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      left:
+        0;
+      right: 0;
+      z-index: 99999;
+      display: none;
+    }
+
+    #popupt {
+
+      background: #fff;
+      padding: 20px;
+      max-width: 520px;
+      height: 20%;
+      margin: 16% auto;
+      position: relative;
+      color: #000000;
+      background-color: black;
+      border: 2px solid greenyellow;
+      border-radius: 10px;
+    }
+
+
+
+    #btnt {
+      width: 59px;
+      font-size: 24px;
+      position: relative;
+      top: 0px;
+      left: 40%;
+      cursor: pointer;
+      z-index: 5;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: greenyellow;
+      background-color: #1a1717;
+      border: 2px solid greenyellow;
+      border-radius: 30%;
+      padding: 3px 10px;
+
+    }
+
+    #gameOver {
+      position: fixed;
+      display: none;
+      z-index: 999999;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      left:
+        0;
+      right: 0;
+      z-index: 99999;
+      display: none;
+    }
+
+    #gameOverPop {
+
+      background: #fff;
+      padding: 20px;
+      max-width: 520px;
+      height: 20%;
+      margin: 16% auto;
+      position: relative;
+      color: #000000;
+      background-color: black;
+      border: 2px solid greenyellow;
+      border-radius: 10px;
+    }
+
+
+
+    #gameOverbtn {
+      width: 59px;
+      font-size: 24px;
+      position: relative;
+      top: 0px;
+      left: 40%;
+      cursor: pointer;
+      z-index: 5;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: greenyellow;
+      background-color: #1a1717;
+      border: 2px solid greenyellow;
+      border-radius: 30%;
+      padding: 3px 10px;
 
     }
   </style>
@@ -144,32 +285,121 @@
       <h1 class="" style="color: greenyellow;  margin: 2px 4%;
         padding: 13px 1px;">Welcome To juicy world</h1>
 
-      <p></p>
-      <span class="close" onclick="document.getElementById('overlay').style.display='none'"> play</span>
+      <div class="player" style="color: greenyellow;  margin: 0px 80px; ">
+        <label for="playerName" ">Enter Your Name</label>
+        <input type=" text" name="" style="color: greenyellow; background: rgba(194, 236, 132, 0.4);" id="playerName"
+          maxlength="10">
+      </div>
+
+      <span class="close" onclick="document.getElementById('overlay').style.display='none'">
+        <div id="btn">
+          play
+        </div>
+
+      </span>
 
     </div>
 
   </div>
+  <div id="targetAchieved">
+    <div id="popupt">
+      <h1 class="" style="color: greenyellow;  margin-left: 134px;
+        padding: 13px 1px;">You Win!!</h1>
+      <span class="closet" onclick="document.getElementById('targetAchieved').style.display='none'">
+        <div id="btnt">
+          close
+        </div>
+
+      </span>
+
+    </div>
+
+  </div>
+  <div id="gameOver">
+    <div id="gameOverPop">
+      <h1 class="" style="color: greenyellow;  margin-left: 134px;
+        padding: 13px 1px; position: relative; top: -30px;">Game Over</h1>
+      <p class="" style="color: greenyellow;  margin-left: 134px;
+        padding: 13px 1px; font-size: 20px;
+    position: relative;
+    top: -60px;">Better Luck Next Time</p>
+      <span class="gameOverclose" style="position: relative;
+      top: -70px;" onclick="document.getElementById('gameOver').style.display='none'">
+        <div id="gameOverbtn">
+          close
+        </div>
+
+      </span>
+
+    </div>
+
+  </div>
+
+  <div id="targetAchieved">
+    <div id="popupt">
+      <h1 class="" style="color: greenyellow;  margin: 2px 4%;
+        padding: 13px 1px;"></h1>
+
+      <span class="closet" onclick="document.getElementById('targetAchieved').style.display='none'">
+        <div id="btnt">
+          play
+        </div>
+
+      </span>
+
+    </div>
+
+  </div>
+
 
   <div class="score-board">
     <h2>Score : </h2>
     <h1 id="score"> </h1>
   </div>
   <div class="container">
-    <div >
-      <p style="color: greenyellow;  margin: 2px 4%; padding:13px 1px">S.U.S. GOVT COLLEGE</p><BR></BR>
-      <P style="color: greenyellow;  margin: 2px 4%; padding:13px 1px">Developed by Keshav Batra and Parveen </P>
+    <div style="position: relative; top: 107px;">
+      <h2 style="color: greenyellow;  position: relative; left: 65px;">S.U.S. GOVT COLLEGE</h2><BR></BR>
+      <h3 style="    position: relative;
+      font-size: 10px;
+      color: greenyellow;
+      width: 282px;
+      left: 80px;
+  ">Developed by : Parveen Rajput and Keshav batra</h3>
     </div>
 
     <div class="grid" style="margin-right: 180px;">
 
     </div>
-    <div></div>
+
+    <div style=" color: greenyellow; display: flex;     margin-left: 23px; position: relative ; top: 70px; right: 45px;
+         margin-top: 16px;">
+      <div id="countdown" style="    top: -1%;
+      left: 36%;"></div>
+      <div id="target" style="    position: relative;
+      top: 30px;
+      left: 20px;">
+
+      </div>
+
+
+      <p style="width: 148px;     position: relative;
+      right: 78px;
+      width: 130px;
+      top: 48px;">player Name :</p>
+      <span id="displayname" style="    position: relative;
+      top: 51px;
+      left: -87px;">
+
+      </span>
+    </div>
 
 
     <audio id="audio">
       <source src="audio/audio.mp3" type="audio/mpeg">
     </audio>
+    <script>
+
+    </script>
 
 </body>
 
