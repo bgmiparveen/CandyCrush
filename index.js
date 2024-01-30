@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // const notValid = [ 5,6,13,15,22,25,27,35,40,45,55,60]
             // if (notValid.includes(i)) continue
             if (rowOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) {
-                score += 9
+                score += 12
                 let intScore = scoreDisplay.innerHTML
                 let Integer = parseInt(intScore)
             
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let decidedColor = squares[i].style.backgroundImage
             const isBlank = squares[i].style.backgroundImage === ''
             if (columnOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) {
-                score += 9
+                score += 12
                 let intScore = scoreDisplay.innerHTML
                 let Integer = parseInt(intScore)
                 
